@@ -1,10 +1,10 @@
-from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
+from SublimeLinter.lint import PythonLinter
 
 
-class __class__(Linter):
-    cmd = '__cmd__'
-    regex = r''
-    multiline = False
+class Darglint(PythonLinter):
+    cmd = ('darglint', '${args}', '-')
+    regex = r'^.+?:(?P<function>.+):(?P<line>\d+): (?:(?P<interface>I\d+)|(?P<style>S\d+)): (?P<message>.+)'
+    multiline = True
     defaults = {
-        'selector': 'source.python'
+        'selector': 'source.python',
     }
