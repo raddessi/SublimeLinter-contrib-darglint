@@ -1,16 +1,12 @@
-This is a template. For "how to make a linter", please check [the HOWTO](HOWTO.md).
-
------------------------------------------------------------------
-
 SublimeLinter-contrib-darglint
 ================================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-__linter__.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-__linter__)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-darglint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-darglint)
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [darglint](https://github.com/terrencepreilly/darglint). It will be used with files that have the “python” syntax.
 
 ## Installation
-SublimeLinter must be installed in order to use this plugin. 
+SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
 
@@ -22,9 +18,8 @@ In order for `darglint` to be executed by SublimeLinter, you must ensure that it
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-Additional SublimeLinter-__linter__ settings:
+Additional SublimeLinter-darglint settings:
 
 |Setting|Description    |
 |:------|:--------------|
-|foo    |Something.     |
-|bar    |Something else.|
+|--docstring-style    |The docstring style used in the given project.     |

@@ -1,10 +1,13 @@
-from SublimeLinter.lint import PythonLinter
+from SublimeLinter.lint import PythonLinter, WARNING
 
 
 class Darglint(PythonLinter):
-    cmd = ('darglint', '${args}', '-')
-    regex = r'^.+?:(?P<function>.+):(?P<line>\d+): (?:(?P<interface>I\d+)|(?P<style>S\d+)): (?P<message>.+)'
+    cmd = ('darglint', '--verbosity', '2', '${file}', '${args}')
+    regex = r'^.+?:(?P<near>.+):(?P<line>\d+): (?P<code>[IS]\d+): (?P<message>.+)'
     multiline = True
     defaults = {
         'selector': 'source.python',
+        'default_type': WARNING,
+        'tempfile_suffix': 'py',
+        '--docstring-style': 'google',
     }
